@@ -1,0 +1,11 @@
+Goal: data analysis of COVID-19 cases to obtain a rough picture of the confirmed case trajectory. 
+
+Jimmy Mar 23: log_trend.py 
+
+    Uses moving average of the growth rate as the progression indicator (we have to tune the average horizon to obtain update to date but not too erratic data.)
+
+    Assumption: there are some constant multiple of confirmed cases running around infecting others, hence the geometric growth of the confirmed cases.
+
+    Model: x(t) = \alpha^(k) * x(t-k) where k is the average horizon. 
+
+    Drawbacks: ignores the fraction of people infected and the number of confirmed cases. 
